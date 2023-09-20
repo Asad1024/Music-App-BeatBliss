@@ -12,7 +12,7 @@ const App = () => {
       <>
         <MusicBanner />
         <MusicContainer />
-        {/* <TopSongs /> */}
+        <TopSongs />
         <TopSingers />
       </>
       <Footer/>

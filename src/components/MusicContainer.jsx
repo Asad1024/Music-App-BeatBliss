@@ -154,7 +154,7 @@ const MusicContainer = () => {
             ))}
           </div>
           <div className="playlistContainer2">
-            <h1>Embrace the BeatBliss Experience</h1>
+            <h1>Enjoy the BeatBliss Experience</h1>
             <img src={logo} alt="" />
             
           </div>
