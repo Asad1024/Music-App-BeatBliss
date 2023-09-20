@@ -6,7 +6,8 @@ import {
   TbPlayerSkipForwardFilled,
 } from "react-icons/tb";
 import musicGif from "../assets/playing.gif";
-import {songs} from "../songs";
+import { songs } from "../songs";
+import logo from "../assets/navLogo.png"
 
 const MusicContainer = () => {
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
@@ -29,8 +30,6 @@ const MusicContainer = () => {
 
     musicElement.addEventListener("timeupdate", handleTimeUpdate);
     musicElement.addEventListener("ended", handleEnded);
-
-    // Return a cleanup function to remove the event listeners when the component unmounts or when the dependency array changes.
     return () => {
       musicElement.removeEventListener("timeupdate", handleTimeUpdate);
       musicElement.removeEventListener("ended", handleEnded);
@@ -97,63 +96,70 @@ const MusicContainer = () => {
       <h1 className="extra ">Recent Music</h1>
       <div className="box">
         <div className="musicContainer">
-        <div className="bottomContainer">
-        <div className="music-info">
-          <span>{songs[currentSongIndex].songName}</span>
-          <div className="music-slider">
-            <input
-              type="range"
-              min={0}
-              max={100}
-              value={sliderValue}
-              onChange={(e) => {
-                const seekTime =
-                  (e.target.value / 100) * musicElementRef.current.duration;
-                musicElementRef.current.currentTime = seekTime;
-                setSliderValue(e.target.value);
-              }}
-            />
-          </div>
-          <div className="music-icons">
-            <span onClick={playPreviousSong}>
-              <TbPlayerSkipBackFilled />
-            </span>
-            <span onClick={togglePlayPause}>{buttonIcon}</span>
-            <span onClick={playNextSong}>
-              <TbPlayerSkipForwardFilled />
-            </span>
-          </div>
-        </div>
-        <div className={`music-details ${imageVisible ? "img-visible" : ""}`}>
-          <img src={musicGif} alt="" />
-        </div>
-      </div>
-        </div>
-        <div className="playlistContainer">
-          <span id="copyright">Best of NCS - No CopyRight Sound</span>
-          {songs.map((song, index) => (
-            <div className="playlist" key={index}>
-              <div className="songImg">
-                <img src={song.coverPaths} alt="" />
+          <div className="bottomContainer">
+            <div className="music-info">
+              <span>{songs[currentSongIndex].songName}</span>
+              <div className="music-slider">
+                <input
+                  type="range"
+                  min={0}
+                  max={100}
+                  value={sliderValue}
+                  onChange={(e) => {
+                    const seekTime =
+                      (e.target.value / 100) * musicElementRef.current.duration;
+                    musicElementRef.current.currentTime = seekTime;
+                    setSliderValue(e.target.value);
+                  }}
+                />
               </div>
-              <div className="songTitle">
-                <span>{song.songName}</span>
-              </div>
-              <div>
-                <span>{song.duration}</span>
-                <span onClick={() => playSelectedSong(index)}>
-                  {currentSongIndex === index && isPlaying ? (
-                    <TbPlayerPauseFilled className="icons" />
-                  ) : (
-                    <TbPlayerPlayFilled className="icons" />
-                  )}
+              <div className="music-icons">
+                <span onClick={playPreviousSong}>
+                  <TbPlayerSkipBackFilled />
+                </span>
+                <span onClick={togglePlayPause}>{buttonIcon}</span>
+                <span onClick={playNextSong}>
+                  <TbPlayerSkipForwardFilled />
                 </span>
               </div>
             </div>
-          ))}
+            <div
+              className={`music-details ${imageVisible ? "img-visible" : ""}`}
+            >
+              <img src={musicGif} alt="" />
+            </div>
+          </div>
+        </div>
+        <div className="feature">
+          <div className="playlistContainer">
+            {songs.map((song, index) => (
+              <div className="playlist" key={index}>
+                <div className="songImg">
+                  <img src={song.coverPaths} alt="" />
+                </div>
+                <div className="songTitle">
+                  <span>{song.songName}</span>
+                </div>
+                <div className="time">
+                  <span>{song.duration}</span>
+                  <span onClick={() => playSelectedSong(index)}>
+                    {currentSongIndex === index && isPlaying ? (
+                      <TbPlayerPauseFilled className="icons" />
+                    ) : (
+                      <TbPlayerPlayFilled className="icons" />
+                    )}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="playlistContainer2">
+            <h1>Embrace the BeatBliss Experience</h1>
+            <img src={logo} alt="" />
+            
+          </div>
         </div>
       </div>
-      
     </div>
   );
 };

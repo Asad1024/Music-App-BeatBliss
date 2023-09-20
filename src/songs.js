@@ -6,18 +6,14 @@ import music5 from "./assets/songs/5.mp3";
 import music6 from "./assets/songs/6.mp3";
 import music7 from "./assets/songs/7.mp3";
 import music8 from "./assets/songs/8.mp3";
-import music9 from "./assets/songs/9.mp3";
-import music10 from "./assets/songs/10.mp3";
 import cover1 from "./assets/covers/1.jpg";
 import cover2 from "./assets/covers/2.jpg";
-import cover3 from "./assets/covers/3.jpg";
+import cover3 from "./assets/covers/3.jpeg";
 import cover4 from "./assets/covers/4.jpg";
 import cover5 from "./assets/covers/5.jpg";
 import cover6 from "./assets/covers/6.jpg";
 import cover7 from "./assets/covers/7.jpg";
 import cover8 from "./assets/covers/8.jpg";
-import cover9 from "./assets/covers/9.jpg";
-import cover10 from "./assets/covers/10.jpg";
 import t1 from "./assets/covers/t1.jpg";
 import t2 from "./assets/covers/t2.jpg";
 import t3 from "./assets/covers/t3.jpg";
@@ -69,90 +65,75 @@ export const songs = [
     duration: "03:28",
   },
   {
-    songName: "Wakka",
+    songName: "Itro",
     filePath: music6,
     coverPaths: cover6,
     duration: "03:27",
   },
   {
-    songName: "Here we go",
+    songName: "yanvince - fearless",
     filePath: music7,
     coverPaths: cover7,
     duration: "04:33",
   },
   {
-    songName: "Rock Musik",
+    songName: "Intouch",
     filePath: music8,
     coverPaths: cover8,
     duration: "03:50",
-  },
-  {
-    songName: "Wakka",
-    filePath: music9,
-    coverPaths: cover9,
-    duration: "03:50",
-  },
-  {
-    songName: "Wakka",
-    filePath: music10,
-    coverPaths: cover10,
-    duration: "03:50",
-  },
+  }
 ];
 
 export const trendSongs1 = [
   {
     songName: "Pardes Katenda",
     coverPaths: t1,
-    link : "https://www.youtube.com/watch?v=rQCdEuyVriU&ab_channel=AdnanDhool"
+    link : "https://www.youtube.com/embed/rQCdEuyVriU?autoplay=1&"
   },
   {
     songName: "Heeriye",
     coverPaths: t2,
-    link:"https://www.youtube.com/watch?v=RLzC55ai0eo&ab_channel=JasleenRoyal"
+    link:"https://www.youtube.com/embed/RLzC55ai0eo?autoplay=1&"
   },
   {
     songName: "Gone Girl",
     coverPaths: t3,
-    link: "https://www.youtube.com/watch?v=mvCWGL_r-Zg&ab_channel=Badshah",
+    link:"https://www.youtube.com/embed/mvCWGL_r-Zg?autoplay=1&"
   },
   {
     songName: "What Jhumka?",
     coverPaths: t4,
-    link: "https://www.youtube.com/watch?v=87JIOAX3njM&ab_channel=SaregamaMusic",
+    link:"https://www.youtube.com/embed/87JIOAX3njM?autoplay=1&"
   },
   {
     songName: "Pasori",
     coverPaths: t5,
-    link:"https://www.youtube.com/watch?v=5Eqb_-j3FDA&ab_channel=CokeStudioPakistan"
+    link:"https://www.youtube.com/embed/5Eqb_-j3FDA?autoplay=1&"
   },
-];
-
-export const trendSongs2 = [
   {
     songName: "Ignite",
     coverPaths: t6,
-    link: "https://www.youtube.com/watch?v=zrwTYozyzYA&ab_channel=7clouds"
+    link:"https://www.youtube.com/embed/zrwTYozyzYA?autoplay=1&"
   },
   {
     songName: "Believer",
     coverPaths: t7,
-    link: "https://www.youtube.com/watch?v=7wtfhZwyrcc&ab_channel=ImagineDragonsVEVO"
+    link:"https://www.youtube.com/embed/7wtfhZwyrcc?autoplay=1&"
   },
   {
     songName: "Despacito",
     coverPaths: t8,
-    link: "https://www.youtube.com/watch?v=kJQP7kiw5Fk&ab_channel=LuisFonsiVEVO"
+    link:"https://www.youtube.com/embed/kJQP7kiw5Fk?autoplay=1&"
   },
   {
     songName: "One Night In Dubai",
     coverPaths: t9,
-    link: "https://www.youtube.com/watch?v=2SBsNJvN1ws&ab_channel=Arash"
+    link:"https://www.youtube.com/embed/2SBsNJvN1ws?autoplay=1&"
   },
   {
     songName: "Love Me Like You Do",
     coverPaths: t10,
-    link: "https://www.youtube.com/watch?v=AJtDXIazrMo&ab_channel=EllieGouldingVEVO"
+    link:"https://www.youtube.com/embed/AJtDXIazrMo?autoplay=1&"
   },
 ];
 

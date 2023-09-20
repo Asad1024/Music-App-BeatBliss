@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import  { useState, useEffect } from 'react';
 import logo from "../assets/navLogo.png";
 
 
@@ -8,6 +8,17 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', closeMenu);
+    return () => {
+      window.removeEventListener('resize', closeMenu);
+    };
+  }, []);
 
   return (
     <nav className={`navbar ${menuOpen ? 'open' : ''}`}>

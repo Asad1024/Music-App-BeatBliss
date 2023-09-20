@@ -12,7 +12,7 @@ const Footer = () => {
        
         <div className="footerAbout">
             <h3>About</h3>
-            <p>Experience the magic of our music app as you delve into a world of captivating melodies and rhythms. Whether you are a fan of classic tunes or contemporary beats, our app has something for everyone..</p>
+            <p>Discover the magic of our music app, offering captivating melodies and rhythms for fans of classics and contemporary beats alike.</p>
         </div>
         <div className="footerIcons">
             <FcMusic className="fIcons1"/>
